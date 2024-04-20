@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-[System.Serializable]
 public class BP_Health : MonoBehaviour
 {
-    float health;
-    void Start()
+    [SerializeField] int currentHealth;
+    [SerializeField] int maxHealth;
+
+    private void Awake()
     {
-        
+        currentHealth = maxHealth;
     }
 
-    void Update()
+    public void TakeDamage(int damageAmount)
     {
-        
+        currentHealth -= damageAmount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        if (currentHealth <= 0) 
+        {
+            Dead();
+        }
+    }
+    void Dead()
+    {
+       Destroy(gameObject);
     }
 }

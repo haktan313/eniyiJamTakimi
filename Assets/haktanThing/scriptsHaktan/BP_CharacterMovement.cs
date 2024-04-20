@@ -19,12 +19,14 @@ public class BP_CharacterMovement : MonoBehaviour
     Vector2 playerVector;
     Rigidbody2D playerRB;
     CapsuleCollider2D playerCapsuleCollider;
+    CircleCollider2D playerCircleCollider;
 
     void Start()
     {
         playerCapsuleCollider = GetComponent<CapsuleCollider2D>();
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        playerCircleCollider = GetComponent<CircleCollider2D>();
     }
 
     void Update()
@@ -97,5 +99,11 @@ public class BP_CharacterMovement : MonoBehaviour
         isDashing=false;
         playerRB.velocity = Vector2.zero;
         playerRB.gravityScale = originalGravityScale;
+    }
+    void OnAttack(InputValue playerInputVector)
+    {
+        if (playerInputVector.isPressed == true) {
+            playerAnimator.SetTrigger("attack");
+        }
     }
 }
