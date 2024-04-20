@@ -316,6 +316,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 10
   jumpSpeed: 5
+  dashCooldown: 0
+  dashValue: 0
 --- !u!50 &1359491515
 Rigidbody2D:
   serializedVersion: 4
@@ -420,7 +422,7 @@ Animator:
   m_GameObject: {fileID: 1359491510}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 960b21fcf2e9ac742ae2e1a792cc018b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
