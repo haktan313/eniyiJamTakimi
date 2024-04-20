@@ -66,7 +66,7 @@ public class BP_CharacterMovement : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D other)
     {
-        if(other.gameObject.tag == "Ground") 
+        if (other.gameObject.tag == "Ground") 
         {
             isGround = false; 
         }
@@ -90,6 +90,7 @@ public class BP_CharacterMovement : MonoBehaviour
     }
     IEnumerator Dash() {
         isDashing = true;
+        playerAnimator.SetBool("dash", true);
         float originalGravityScale = playerRB.gravityScale;
         playerRB.gravityScale = 0;
         float dashDirection= Mathf.Sign(transform.localScale.x);
@@ -97,6 +98,7 @@ public class BP_CharacterMovement : MonoBehaviour
 
         yield return new WaitForSeconds(dashCooldown);
         isDashing=false;
+        playerAnimator.SetBool("dash", false);
         playerRB.velocity = Vector2.zero;
         playerRB.gravityScale = originalGravityScale;
     }
