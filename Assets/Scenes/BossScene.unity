@@ -620,7 +620,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609152067}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -656,6 +656,8 @@ MonoBehaviour:
   attackInterval: 2
   attackChance: 0.5
   spitSpeed: 1
+  soundWaveSpeed: 10
+  nextAttackTime: 0
 --- !u!70 &1609152072
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
