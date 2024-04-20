@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 62a755de1180df34c9b495d1248c7331, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -123,8 +123,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11448002, y: -0.13468242}
-  m_Size: {x: 1.9831815, y: 5.043822}
+  m_Offset: {x: -0.04573536, y: -0.053013563}
+  m_Size: {x: 0.820776, y: 3.3969803}
   m_Direction: 0
 --- !u!50 &4540993174243166518
 Rigidbody2D:
@@ -165,10 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1738bfd57e225294fa5cbf24c241f448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 20
-  jumpSpeed: 30
+  playerSpeed: 10
+  jumpSpeed: 35
   dashCooldown: 0.1
-  dashValue: 125
+  dashValue: 75
 --- !u!95 &8159262426508728218
 Animator:
   serializedVersion: 5
@@ -227,7 +227,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6589995380649332066}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -252,9 +252,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.3734093, y: -0.11082053}
+  m_Offset: {x: 1.0024819, y: -0.08837378}
   serializedVersion: 2
-  m_Radius: 2.457489
+  m_Radius: 1.5134994
 --- !u!114 &2375533319343512026
 MonoBehaviour:
   m_ObjectHideFlags: 0
