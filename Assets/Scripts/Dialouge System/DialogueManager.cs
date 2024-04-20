@@ -9,10 +9,11 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
-    public Animator animator;
-
 
     private Queue<string> sentences;
+
+    [SerializeField]
+    private Dialogue dialogue;
 
     void Start()
     {
@@ -21,9 +22,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue (Dialogue dialogue)
     {
-        animator.SetBool("IsOpen", true);
-
-        nameText.text = dialogue.name;
+        nameText.text = dialogue.name1;
 
         sentences.Clear();
 
@@ -32,24 +31,25 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
-        DisplayNextSentence();
+        DisplayNextSentence(); 
     }
 
     public void DisplayNextSentence()
     {
         if(sentences.Count == 0) {
-            EndDialogue();
             return;
+        }
+
+        if(nameText.text == dialogue.name1)
+        {
+            nameText.text = dialogue.name2;
+        }
+        else
+        {
+            nameText.text = dialogue.name1;
         }
 
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
-
     }
-
-    void EndDialogue()
-    {
-        animator.SetBool("IsOpen", false);
-    }
-
 }
