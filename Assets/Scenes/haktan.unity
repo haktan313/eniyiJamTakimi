@@ -316,8 +316,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 10
   jumpSpeed: 5
-  dashCooldown: 0
-  dashValue: 0
+  dashCooldown: 0.1
+  dashValue: 50
 --- !u!50 &1359491515
 Rigidbody2D:
   serializedVersion: 4
