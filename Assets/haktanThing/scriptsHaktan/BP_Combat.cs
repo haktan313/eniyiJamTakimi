@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class BP_Combat : MonoBehaviour
 {
-    void Start()
+    [SerializeField] int damageAmountToGiven;
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-
-    void Update()
-    {
-        
+        if(other.CompareTag("Enemy"))
+        {
+            BP_Health enemyHealth = other.GetComponent<BP_Health>();
+            if(enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damageAmountToGiven);
+                Debug.Log("hittttt" + other.name);
+            }
+        }
     }
 }
