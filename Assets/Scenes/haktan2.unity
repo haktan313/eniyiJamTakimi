@@ -527,26 +527,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &214489545 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1487450205763861139, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-  m_PrefabInstance: {fileID: 5039646708950635458}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &214489551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214489545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 1422493649}
-  m_Damping: 0.5
-  m_MaxWindowSize: -1
 --- !u!1 &480661304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,34 +1770,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 918883277453856316, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 1487450205763861139, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_Name
       value: State-Driven Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 2599661643554968153, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5981739153264038880, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -65.59863
-      objectReference: {fileID: 0}
-    - target: {fileID: 5981739153264038880, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.44898367
-      objectReference: {fileID: 0}
-    - target: {fileID: 7189516699135502724, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -65.59863
-      objectReference: {fileID: 0}
-    - target: {fileID: 7189516699135502724, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.44898367
-      objectReference: {fileID: 0}
+    - target: {fileID: 2234424103923537115, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 1422493649}
     - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_Follow
       value: 
@@ -1827,68 +1787,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 733887810}
     - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_ChildCameras.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.data[0].m_Hash
-      value: 1432961145
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.data[1].m_Hash
-      value: 81563449
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.data[2].m_Hash
-      value: 788460410
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.data[3].m_Hash
-      value: 304293996
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.data[4].m_Hash
-      value: -1423829307
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.data[5].m_Hash
-      value: -1843795903
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.data[0].m_ParentHash
-      value: 756556552
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.data[1].m_ParentHash
-      value: 756556552
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.data[2].m_ParentHash
-      value: 756556552
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.data[3].m_ParentHash
-      value: 756556552
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.data[4].m_ParentHash
-      value: 756556552
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.data[5].m_ParentHash
-      value: 756556552
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1487450205763861139, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 214489551}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
