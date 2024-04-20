@@ -15,6 +15,7 @@ public class BP_CharacterMovement : MonoBehaviour
     bool isGround = false;
     bool isWalking = false;
     bool isDashing = false;
+    int comboInt = 0;
     Animator playerAnimator;
     Vector2 playerVector;
     Rigidbody2D playerRB;
@@ -73,8 +74,8 @@ public class BP_CharacterMovement : MonoBehaviour
     }
 
     void OnMove(InputValue playerInputVector) {
-        playerVector = playerInputVector.Get<Vector2>();
-        Debug.Log("Moving: " + playerVector);
+            playerVector = playerInputVector.Get<Vector2>();
+            Debug.Log("Moving: " + playerVector);
     }
     void OnJump(InputValue playerInputVector) {
         if(playerInputVector.isPressed == true && isGround) {
@@ -90,7 +91,7 @@ public class BP_CharacterMovement : MonoBehaviour
     }
     IEnumerator Dash() {
         isDashing = true;
-        playerAnimator.SetBool("dash", true);
+        playerAnimator.Play("Dash");
         float originalGravityScale = playerRB.gravityScale;
         playerRB.gravityScale = 0;
         float dashDirection= Mathf.Sign(transform.localScale.x);
@@ -100,12 +101,21 @@ public class BP_CharacterMovement : MonoBehaviour
         isDashing=false;
         playerRB.velocity = Vector2.zero;
         playerRB.gravityScale = originalGravityScale;
-        playerAnimator.SetBool("dash", false);
+
     }
     void OnAttack(InputValue playerInputVector)
     {
         if (playerInputVector.isPressed == true) {
-            playerAnimator.SetTrigger("attack");
+            if (comboInt == 0)
+            {
+                playerAnimator.Play("hit1");
+                comboInt = 1;
+            }else if(comboInt == 1)
+            {
+                playerAnimator.Play("Hit2");
+                comboInt = 0;
+            }
+
         }
     }
 }
