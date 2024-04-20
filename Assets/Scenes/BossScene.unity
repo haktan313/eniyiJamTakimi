@@ -230,7 +230,7 @@ Transform:
   m_GameObject: {fileID: 626579965}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.38, y: -1.03, z: 0}
+  m_LocalPosition: {x: -1.2, y: -1.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -655,7 +655,7 @@ MonoBehaviour:
   soundWavePrefab: {fileID: 4425548924858080737, guid: 5ba4831011d15b94c88fd87400741f85, type: 3}
   attackInterval: 2
   attackChance: 0.5
-  spitSpeed: 9
+  spitSpeed: 1
 --- !u!70 &1609152072
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

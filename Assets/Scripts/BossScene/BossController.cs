@@ -47,11 +47,16 @@ public class BossController : MonoBehaviour
     void ShootSpit()
     {
         Vector2 direction = (playerTransform.position - transform.position).normalized;
+        float distance = Vector2.Distance(playerTransform.position, transform.position);
 
         GameObject spit = Instantiate(spitPrefab, transform.position, Quaternion.identity);
+        
+
+        // Vy = 5x / Vx
+
 
         Rigidbody2D rb = spit.GetComponent<Rigidbody2D>();
-        rb.velocity = direction * spitSpeed;
+        rb.velocity = new Vector2(-5, 5*distance / 5);
     }
 
     void ShootSoundWave()
