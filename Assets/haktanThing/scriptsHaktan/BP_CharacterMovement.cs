@@ -11,6 +11,7 @@ public class BP_CharacterMovement : MonoBehaviour
     [SerializeField] float jumpSpeed;
     [SerializeField] float dashCooldown;
     [SerializeField] float dashValue;
+    [SerializeField] bool isAttacking = false;
 
     bool isGround = false;
     bool isWalking = false;
@@ -42,18 +43,22 @@ public class BP_CharacterMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (!isDashing)
+        if (!isAttacking)
         {
-            playerRB.velocity = new Vector2(playerVector.x * playerSpeed, playerRB.velocity.y);
-        }
-        if (Mathf.Abs(playerVector.x) > 0.01f)
-        {
-            playerAnimator.SetBool("isWalking", true);
-            isWalking = true;
-        }else
-        {
-            playerAnimator.SetBool("isWalking", false);
-            isWalking = false;
+            if (!isDashing)
+            {
+                playerRB.velocity = new Vector2(playerVector.x * playerSpeed, playerRB.velocity.y);
+            }
+            if (Mathf.Abs(playerVector.x) > 0.01f)
+            {
+                playerAnimator.SetBool("isWalking", true);
+                isWalking = true;
+            }
+            else
+            {
+                playerAnimator.SetBool("isWalking", false);
+                isWalking = false;
+            }
         }
     }
 
@@ -105,7 +110,7 @@ public class BP_CharacterMovement : MonoBehaviour
     }
     void OnAttack(InputValue playerInputVector)
     {
-        if (playerInputVector.isPressed == true) {
+        if (playerInputVector.isPressed == true && !isAttacking) {
             if (comboInt == 0)
             {
                 playerAnimator.Play("hit1");
