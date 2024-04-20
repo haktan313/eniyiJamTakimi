@@ -98,9 +98,9 @@ public class BP_CharacterMovement : MonoBehaviour
 
         yield return new WaitForSeconds(dashCooldown);
         isDashing=false;
-        playerAnimator.SetBool("dash", false);
         playerRB.velocity = Vector2.zero;
         playerRB.gravityScale = originalGravityScale;
+        playerAnimator.SetBool("dash", false);
     }
     void OnAttack(InputValue playerInputVector)
     {
