@@ -10,6 +10,7 @@ public class BossController : MonoBehaviour
     public float attackInterval = 2f; 
     public float attackChance = 0.5f;
     public float spitSpeed = 5f;
+    public float soundWaveSpeed = 10f;
 
     [SerializeField]
     private float nextAttackTime = 0f;
@@ -55,13 +56,20 @@ public class BossController : MonoBehaviour
 
         // Vy = 5x / Vx
 
-
         Rigidbody2D rb = spit.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(-5, 5*distance / 5);
     }
 
     void ShootSoundWave()
     {
-        Instantiate(soundWavePrefab, transform.position, Quaternion.identity);
+        // Ses dalgasý hedefe doðru gitmesi için yönü bul
+        Vector2 direction = (playerTransform.position - transform.position).normalized;
+
+        // Ses dalgasý prefab'ýný oluþtur
+        GameObject soundWave = Instantiate(soundWavePrefab, transform.position, Quaternion.identity);
+
+        // Ses dalgasýnýn hedefe doðru gitmesini saðla
+        Rigidbody2D rb = soundWave.GetComponent<Rigidbody2D>();
+        rb.velocity = direction * soundWaveSpeed;
     }
 }
