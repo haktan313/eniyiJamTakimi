@@ -9,8 +9,9 @@ public class BossController : MonoBehaviour
 
     public float attackInterval = 2f; 
     public float attackChance = 0.5f;
-    public float spitSpeed = 5f; 
+    public float spitSpeed = 5f;
 
+    [SerializeField]
     private float nextAttackTime = 0f;
 
     private Transform playerTransform;
