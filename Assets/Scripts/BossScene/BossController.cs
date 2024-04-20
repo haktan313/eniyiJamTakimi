@@ -36,14 +36,14 @@ public class BossController : MonoBehaviour
     {
         float randomValue = Random.value;
 
-        if (randomValue < attackChance)
-        {
+        //if (randomValue < attackChance)
+        //{
             ShootSpit();
-        }
-        else
-        {
-            ShootSoundWave();
-        }
+        //}
+        //else
+        //{
+        //    ShootSoundWave();
+        //}
     }
 
     void ShootSpit()
