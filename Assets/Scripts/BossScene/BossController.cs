@@ -53,7 +53,7 @@ public class BossController : MonoBehaviour
         
         Vector2 direction = (playerTransform.position - transform.position).normalized;
         float distance = Vector2.Distance(playerTransform.position, transform.position);
-        animator.SetTrigger("attack");
+        animator.Play("enemyHit");
         GameObject spit = Instantiate(spitPrefab, transform.position, Quaternion.identity);
         
 

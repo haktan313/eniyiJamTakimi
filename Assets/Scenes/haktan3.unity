@@ -891,22 +891,6 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 175525720}
-    - target: {fileID: 5981739153264038880, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 44.35136
-      objectReference: {fileID: 0}
-    - target: {fileID: 5981739153264038880, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.5910163
-      objectReference: {fileID: 0}
-    - target: {fileID: 7189516699135502724, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 44.35136
-      objectReference: {fileID: 0}
-    - target: {fileID: 7189516699135502724, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.5910163
-      objectReference: {fileID: 0}
     - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_Follow
       value: 
@@ -916,12 +900,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2127806050}
     - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
-      propertyPath: m_ParentHash.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_ChildCameras.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2460,10 +2440,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1284177943289503713, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
-      propertyPath: orthographic size
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 2246003784126812326, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: m_LocalPosition.x
       value: 44.069984
