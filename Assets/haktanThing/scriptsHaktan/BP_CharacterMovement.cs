@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 
 public class BP_CharacterMovement : MonoBehaviour
 {
-    [SerializeField] float playerSpeed;
+    [SerializeField] public float playerSpeed;
     [SerializeField] float jumpSpeed;
     [SerializeField] float dashCooldown;
     [SerializeField] float dashValue;

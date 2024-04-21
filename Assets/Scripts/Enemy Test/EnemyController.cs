@@ -62,4 +62,11 @@ public class EnemyController : MonoBehaviour
         animator.SetBool("isAttacking", isAttacking);
         isAttacking = false;
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
+
 }
