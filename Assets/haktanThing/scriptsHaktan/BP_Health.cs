@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class BP_Health : MonoBehaviour
 {
-    [SerializeField] int currentHealth;
+    public int currentHealth;
     [SerializeField] int maxHealth;
 
     public float turnSpeed = 180f; 

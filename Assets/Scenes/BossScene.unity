@@ -147,11 +147,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2246003784126812326, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.161854
+      value: -13.325245
       objectReference: {fileID: 0}
     - target: {fileID: 2246003784126812326, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.7716093
+      value: 6.75916
       objectReference: {fileID: 0}
     - target: {fileID: 2246003784126812326, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -386,6 +386,27 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
+--- !u!1 &511411539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6589995380649332066, guid: bed9a2f92b04a89489c641d9314396f3, type: 3}
+  m_PrefabInstance: {fileID: 954634370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &511411547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511411539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1cc6bcbd091b884299583d4c5f2d927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 100
+  maxHealth: 100
+  turnSpeed: 180
+  fallSpeed: 1
 --- !u!1 &705055174
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +606,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6589995380649332066, guid: bed9a2f92b04a89489c641d9314396f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 511411547}
   m_SourcePrefab: {fileID: 100100000, guid: bed9a2f92b04a89489c641d9314396f3, type: 3}
 --- !u!1 &1017333973
 GameObject:
@@ -599,7 +623,7 @@ GameObject:
   - component: {fileID: 1017333974}
   m_Layer: 0
   m_Name: bossMekan
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -672,6 +696,55 @@ Transform:
   - {fileID: 917614012}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1564890859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1564890861}
+  - component: {fileID: 1564890860}
+  m_Layer: 0
+  m_Name: RatSpawnController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1564890860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564890859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b93758bcb92c25469abc03875ad7352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 2462177209082097628, guid: d77aaec4e2397bd4488c5733cab61586, type: 3}
+  spawnPoints:
+  - {fileID: 2126880565}
+  - {fileID: 1912766370}
+  spawnInterval: 6
+--- !u!4 &1564890861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564890859}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.950363, y: 14.441202, z: -0.15304437}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1609152067
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,9 +759,10 @@ GameObject:
   - component: {fileID: 1609152070}
   - component: {fileID: 1609152072}
   - component: {fileID: 1609152073}
+  - component: {fileID: 1609152074}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -799,7 +873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8597285538c6c8e4cb8f2ea68d68c03d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spitPrefab: {fileID: 7577226284181616218, guid: 1317f973327d8bf4fa0bb3bf8c3834d5, type: 3}
+  spitPrefab: {fileID: 1084979824820300268, guid: 553b79d486a8f2f4689445e6af337678, type: 3}
   soundWavePrefab: {fileID: 4425548924858080737, guid: 5ba4831011d15b94c88fd87400741f85, type: 3}
   attackInterval: 2
   attackChance: 0.5
@@ -862,6 +936,84 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1609152074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609152067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1cc6bcbd091b884299583d4c5f2d927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 1000
+  maxHealth: 1000
+  turnSpeed: 180
+  fallSpeed: 1
+--- !u!1 &1912766369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1912766370}
+  m_Layer: 0
+  m_Name: RatSpawner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1912766370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912766369}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.54, y: 20.96, z: -0.15304437}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2126880564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2126880565}
+  m_Layer: 0
+  m_Name: RatSpawner1
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2126880565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126880564}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.4, y: 20.96, z: -0.15304437}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -873,3 +1025,6 @@ SceneRoots:
   - {fileID: 175983640}
   - {fileID: 453146753}
   - {fileID: 389034929}
+  - {fileID: 1564890861}
+  - {fileID: 2126880565}
+  - {fileID: 1912766370}
