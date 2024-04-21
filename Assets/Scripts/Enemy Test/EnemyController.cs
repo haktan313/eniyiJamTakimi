@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindWithTag("Player").GetComponent<Transform>();
     }
 
     void Update()
@@ -42,6 +43,10 @@ public class EnemyController : MonoBehaviour
     {
         Vector2 targetDirection = (player.position - transform.position).normalized;
         rb.velocity = targetDirection * moveSpeed;
+
+        //float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
+        //transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+
     }
 
     void Attack()
