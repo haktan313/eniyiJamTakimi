@@ -14,12 +14,14 @@ public class BossController : MonoBehaviour
 
     [SerializeField]
     private float nextAttackTime = 0f;
+    private Animator animator;
 
     private Transform playerTransform;
 
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -48,9 +50,10 @@ public class BossController : MonoBehaviour
 
     void ShootSpit()
     {
+        
         Vector2 direction = (playerTransform.position - transform.position).normalized;
         float distance = Vector2.Distance(playerTransform.position, transform.position);
-
+        animator.SetTrigger("attack");
         GameObject spit = Instantiate(spitPrefab, transform.position, Quaternion.identity);
         
 
