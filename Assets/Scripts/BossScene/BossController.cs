@@ -36,16 +36,7 @@ public class BossController : MonoBehaviour
 
     void Attack()
     {
-        float randomValue = Random.value;
-
-        //if (randomValue < attackChance)
-        //{
-            ShootSpit();
-        //}
-        //else
-        //{
-        //    ShootSoundWave();
-        //}
+        ShootSpit();
     }
 
     void ShootSpit()
@@ -63,16 +54,4 @@ public class BossController : MonoBehaviour
         rb.velocity = new Vector2(-5, 5*distance / 5);
     }
 
-    void ShootSoundWave()
-    {
-        // Ses dalgasý hedefe doðru gitmesi için yönü bul
-        Vector2 direction = (playerTransform.position - transform.position).normalized;
-
-        // Ses dalgasý prefab'ýný oluþtur
-        GameObject soundWave = Instantiate(soundWavePrefab, transform.position, Quaternion.identity);
-
-        // Ses dalgasýnýn hedefe doðru gitmesini saðla
-        Rigidbody2D rb = soundWave.GetComponent<Rigidbody2D>();
-        rb.velocity = direction * soundWaveSpeed;
-    }
 }
