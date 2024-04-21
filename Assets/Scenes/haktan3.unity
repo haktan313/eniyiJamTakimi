@@ -236,9 +236,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4791466724823333445, guid: d77aaec4e2397bd4488c5733cab61586, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
+    - target: {fileID: 3318478188961381634, guid: d77aaec4e2397bd4488c5733cab61586, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318478188961381634, guid: d77aaec4e2397bd4488c5733cab61586, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3041,6 +3045,7 @@ MonoBehaviour:
   dashCooldown: 0.1
   dashValue: 75
   isAttacking: 0
+  dashSound: {fileID: 0}
 --- !u!70 &5787420859433038099
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
