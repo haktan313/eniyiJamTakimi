@@ -18,6 +18,9 @@ public class BossController : MonoBehaviour
 
     private Transform playerTransform;
 
+    [SerializeField]
+    private AudioSource spitSound;
+
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -44,14 +47,17 @@ public class BossController : MonoBehaviour
         
         Vector2 direction = (playerTransform.position - transform.position).normalized;
         float distance = Vector2.Distance(playerTransform.position, transform.position);
-        animator.Play("enemyHit");
+        animator.Play("SpitAnim");
         GameObject spit = Instantiate(spitPrefab, transform.position, Quaternion.identity);
         
 
         // Vy = 5x / Vx
-
         Rigidbody2D rb = spit.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(-5, 5*distance / 5);
+
+        spitSound.Play();
+
+
     }
 
 }
