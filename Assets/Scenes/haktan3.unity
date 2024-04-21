@@ -358,7 +358,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.93, y: 4.41, z: 0}
-  m_LocalScale: {x: 15.274564, y: 1, z: 1}
+  m_LocalScale: {x: 12.792447, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1483351865}
@@ -589,7 +589,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -39.81, y: 4.41, z: 0}
-  m_LocalScale: {x: 57.15556, y: 1, z: 1}
+  m_LocalScale: {x: 55.012226, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1483351865}
@@ -1137,8 +1137,8 @@ Transform:
   m_GameObject: {fileID: 569252286}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -73.37, y: 4.41, z: 0}
-  m_LocalScale: {x: 6.727031, y: 1, z: 1}
+  m_LocalPosition: {x: -73.89, y: 4.41, z: 0}
+  m_LocalScale: {x: 5.8861523, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1483351865}
@@ -2321,8 +2321,8 @@ Transform:
   m_GameObject: {fileID: 1641149107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 73.27, y: 4.78, z: 0}
-  m_LocalScale: {x: 7.1996894, y: 1, z: 1}
+  m_LocalPosition: {x: 73.76, y: 4.78, z: 0}
+  m_LocalScale: {x: 6.2997284, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1483351865}
@@ -3041,7 +3041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
-  jumpSpeed: 35
+  jumpSpeed: 40
   dashCooldown: 0.1
   dashValue: 75
   isAttacking: 0
@@ -3078,8 +3078,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04573536, y: -0.053013563}
-  m_Size: {x: 0.820776, y: 3.3969803}
+  m_Offset: {x: -0.050994873, y: -0.15288925}
+  m_Size: {x: 1.7270508, y: 4.9313602}
   m_Direction: 0
 --- !u!1 &6589995381499769663
 GameObject:
@@ -3158,9 +3158,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.0024819, y: -0.08837378}
+  m_Offset: {x: 1.9115524, y: -0.01052618}
   serializedVersion: 2
-  m_Radius: 1.5134994
+  m_Radius: 2.6622543
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
