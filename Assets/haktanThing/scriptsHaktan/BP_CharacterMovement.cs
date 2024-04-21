@@ -18,14 +18,18 @@ public class BP_CharacterMovement : MonoBehaviour
     bool isWalking = false;
     bool isDashing = false;
     int comboInt = 0;
+
     Animator playerAnimator;
     Vector2 playerVector;
     Rigidbody2D playerRB;
     CapsuleCollider2D playerCapsuleCollider;
     CircleCollider2D playerCircleCollider;
 
+    [SerializeField]
+    private AudioSource dashSound;
+
     void Start()
-    {
+    {  
         playerCapsuleCollider = GetComponent<CapsuleCollider2D>();
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
@@ -93,6 +97,7 @@ public class BP_CharacterMovement : MonoBehaviour
         if(playerInputVector.isPressed == true) {
             Debug.Log("sa");
             StartCoroutine(Dash());
+            dashSound.Play();
         }
     }
     IEnumerator Dash() {
