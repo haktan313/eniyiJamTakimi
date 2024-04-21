@@ -27,6 +27,10 @@ public class BP_CharacterMovement : MonoBehaviour
 
     [SerializeField]
     private AudioSource dashSound;
+    [SerializeField]
+    private AudioSource punchSound;
+    [SerializeField]
+    private AudioSource walkSound;
 
     void Start()
     {  
@@ -86,6 +90,7 @@ public class BP_CharacterMovement : MonoBehaviour
     void OnMove(InputValue playerInputVector) {
             playerVector = playerInputVector.Get<Vector2>();
             Debug.Log("Moving: " + playerVector);
+        walkSound.Play();
     }
     void OnJump(InputValue playerInputVector) {
         if(playerInputVector.isPressed == true && isGround) {
@@ -126,6 +131,7 @@ public class BP_CharacterMovement : MonoBehaviour
                 playerAnimator.Play("Hit2");
                 comboInt = 0;
             }
+            punchSound.Play();
 
         }
     }

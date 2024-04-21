@@ -407,6 +407,11 @@ MonoBehaviour:
   maxHealth: 100
   turnSpeed: 180
   fallSpeed: 1
+--- !u!82 &511411548 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6624919300965434701, guid: bed9a2f92b04a89489c641d9314396f3, type: 3}
+  m_PrefabInstance: {fileID: 954634370}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705055174
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +568,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5679385196717102293, guid: bed9a2f92b04a89489c641d9314396f3, type: 3}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 511411548}
     - target: {fileID: 5679385196717102293, guid: bed9a2f92b04a89489c641d9314396f3, type: 3}
       propertyPath: playerSpeed
       value: 20
