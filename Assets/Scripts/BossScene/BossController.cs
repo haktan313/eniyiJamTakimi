@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossController : MonoBehaviour
 {
@@ -21,10 +22,13 @@ public class BossController : MonoBehaviour
     [SerializeField]
     private AudioSource spitSound;
 
+    private BP_Health health;
+
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
+        health = GetComponent<BP_Health>();
     }
 
     void Update()
@@ -34,6 +38,11 @@ public class BossController : MonoBehaviour
             Attack();
 
             nextAttackTime = Time.time + attackInterval;
+        }
+
+        if(health.currentHealth <= 0)
+        {
+            SceneManager.LoadScene(4);
         }
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -37,6 +38,7 @@ public class DialogueManager : MonoBehaviour
     public void DisplayNextSentence()
     {
         if(sentences.Count == 0) {
+            EndDialogue();
             return;
         }
 
@@ -52,4 +54,11 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
     }
+
+    void EndDialogue()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+
 }
