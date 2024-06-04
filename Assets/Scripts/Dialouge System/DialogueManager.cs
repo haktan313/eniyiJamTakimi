@@ -57,7 +57,17 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        SceneManager.LoadScene(2);
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        switch(sceneIndex)
+        {
+            case 1:
+                SceneManager.LoadScene(2);
+                break;
+            case 3:
+                SceneManager.LoadScene(4);
+                break;
+        }
     }
 
 

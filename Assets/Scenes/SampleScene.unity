@@ -290,23 +290,7 @@ MonoBehaviour:
   dialogue:
     name1: Allyah
     name2: John Doe
-    sentences:
-    - "Tuttu\u011Fun din yanl\u0131\u015Ft\u0131, ger\xE7ek Tanr\u0131 benim Allyah
-      ve ger\xE7ek din \xE7ikamokkdur."
-    - "XD Bu ucube varl\u0131k m\u0131 ger\xE7ekten Tanr\u0131 zaaaaaaa kamera nerde?"
-    - "Bu \"ucube\" tanr\u0131 sana cennete gitmen i\xE7in bir se\xE7enek sunuyor"
-    - "Ne yapcakm\u0131\u015F\u0131m dizlerime kapan\u0131p yalvar\u0131m m\u0131?!"
-    - "Yooo\u011Fk ama bu da g\xFCzel fikirmi\u015F bi dahaki \xF6lene bunu yapt\u0131ray\u0131m.
-      Ge\xE7mi\u015Fteki hatalar\u0131nla y\xFCzle\u015Firsen seni cennete al\u0131cam
-      ancak sistemde g\xF6rd\xFC\u011F\xFCm kadar\u0131yla fesat birinin tekisin"
-    - "TANRI SEN\u0130N G\u0130B\u0130 B\u0130R FARE \u0130SE K\u0130M B\u0130L\u0130R
-      CENNETDE NASIL B\u0130R LA\u011EIMDIR"
-    - "EV\u0130M HAKKINDA D\xDCZG\xDCN KONU\u015E!!!! SANA B\u0130R FIRSAT VERD\u0130M
-      YA \u015EANSINI KULLAN YADA CHENNEMDE HAPSOL"
-    - "TAMAM tamam y\xFCzle\u015Fece\u011Fim ne istiyorsun ne yapmam gerek?"
-    - "\xDC\u015Fenmi\u015Ftim ama neyse ya yapak hadi."
-    - "O zaman \xE7ocuklu\u011Fundan beridir ilk hatan olan TEMBELL\u0130KLE y\xFCzle\u015Fme
-      vaktin."
+    sentences: []
 --- !u!4 &130136601
 Transform:
   m_ObjectHideFlags: 0
@@ -1420,9 +1404,10 @@ MonoBehaviour:
     - "Biliyorum sa\u011Fol her neyse ne yapmam gerek"
     - "Gecmisinde yapt\u0131g\u0131n hatalarla y\xFCzle\u015Fmen gerek"
     - "Benim hatam yok ki ben m\xFCkemmel biriyim "
-    - "Sen oyle san fani ilk hatan olan TEMBELL\u0130KLE y\xFCzle\u015Fme vaktin
-      geldi"
-    - "\xFC\u015Fenmi\u015Ftim ama neyse yapal\u0131m hadi"
+    - "Sen oyle san fani. Hatalar\u0131nla y\xFCzle\u015Fmeden \xF6nce ne kadar g\xFC\xE7l\xFC
+      oldu\u011Funu g\xF6relim bakal\u0131m. Seni g\xFCc\xFCn\xFC test etmen i\xE7in
+      la\u011F\u0131ma g\xF6ndericem."
+    - "Hadi bakal\u0131m."
 --- !u!4 &1276478107
 Transform:
   m_ObjectHideFlags: 0

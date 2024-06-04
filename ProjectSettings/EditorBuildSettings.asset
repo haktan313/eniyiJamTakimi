@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/haktan3.unity
     guid: f6460d4ca0e26c64f93fc3449ce739aa
   - enabled: 1
+    path: Assets/Scenes/TutorialEndScene.unity
+    guid: 26de07bbc290f494c8f15242dc4eaf9f
+  - enabled: 1
     path: Assets/Scenes/BossScene.unity
     guid: 355cf80d61db73847b1dac9f4a0ff190
   - enabled: 1
