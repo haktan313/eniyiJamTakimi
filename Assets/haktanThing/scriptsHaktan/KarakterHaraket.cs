@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -40,6 +41,8 @@ public class KarakterHaraket : MonoBehaviour
     private GameObject kapiDusen;
 
     int aniCount = 0;
+
+    [SerializeField] GameObject memoryText;
 
     void Start()
     {
@@ -142,31 +145,36 @@ public class KarakterHaraket : MonoBehaviour
         if (other.gameObject.tag == "memory1")
         {
             Debug.Log("Memory1");
-            Destroy(other.gameObject);
+            memoryText.SetActive(true);
+            memoryText.GetComponentInChildren<TextMeshProUGUI>().text = "En sevdigi bira kirmizi tuborgdu surekli icerdi";
             aniCount++;
         }
         if (other.gameObject.tag == "memory2")
         {
             Debug.Log("Memory2");
-            Destroy(other.gameObject);
+            memoryText.SetActive(true);
+            memoryText.GetComponentInChildren<TextMeshProUGUI>().text = "Pandara kolyesini her yerde takardi";
             aniCount++;
         }
         if (other.gameObject.tag == "memory3")
         {
             Debug.Log("Memory3");
-            Destroy(other.gameObject);
+            memoryText.SetActive(true);
+            memoryText.GetComponentInChildren<TextMeshProUGUI>().text = "O Rottweiler kopegi gercekten cok tatliydi keske olmeseydi";
             aniCount++;
         }
         if (other.gameObject.tag == "memory4")
         {
             Debug.Log("Memory4");
-            Destroy(other.gameObject);
+            memoryText.SetActive(true);
+            memoryText.GetComponentInChildren<TextMeshProUGUI>().text = "Saclarini sari yapinca cok guzel olmustu";
             aniCount++;
         }
         if (other.gameObject.tag == "memory5")
         {
             Debug.Log("Memory5");
-            Destroy(other.gameObject);
+            memoryText.SetActive(true);
+            memoryText.GetComponentInChildren<TextMeshProUGUI>().text = "Arabesk dinlemeyi cok severdi ozellikle Ferdi Tayfuru";
             aniCount++;
         }
 
@@ -176,6 +184,7 @@ public class KarakterHaraket : MonoBehaviour
             kapiDusen.SetActive(true);
         }
     }
+
 
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -187,6 +196,37 @@ public class KarakterHaraket : MonoBehaviour
             {
                 currentElevators.Remove(elevator);
             }
+        }
+
+        if (other.gameObject.tag == "memory1")
+        {
+            Debug.Log("Memory1");
+            memoryText.SetActive(false);
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "memory2")
+        {
+            Debug.Log("Memory2");
+            memoryText.SetActive(false);
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "memory3")
+        {
+            Debug.Log("Memory3");
+            memoryText.SetActive(false);
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "memory4")
+        {
+            Debug.Log("Memory4");
+            memoryText.SetActive(false);
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "memory5")
+        {
+            Debug.Log("Memory5");
+            memoryText.SetActive(false);
+            Destroy(other.gameObject);
         }
     }
 

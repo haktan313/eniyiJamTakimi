@@ -49,6 +49,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2968297809
+    locked: 0
   - name: Bullet
     uniqueID: 1515990389
     locked: 0

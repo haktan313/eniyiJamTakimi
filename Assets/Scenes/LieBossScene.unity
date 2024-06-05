@@ -583,9 +583,9 @@ GameObject:
   - component: {fileID: 123031660}
   - component: {fileID: 123031662}
   - component: {fileID: 123031661}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (15)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -599,7 +599,7 @@ Transform:
   m_GameObject: {fileID: 123031659}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.005272, y: -7.3982553, z: -0.66260225}
+  m_LocalPosition: {x: -15.005272, y: -7.3200006, z: -0.66260225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -760,7 +760,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &208388145
 Canvas:
   m_ObjectHideFlags: 0
@@ -770,8 +770,8 @@ Canvas:
   m_GameObject: {fileID: 208388142}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1456120359}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -781,8 +781,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: -2
+  m_SortingLayerID: -1326669487
+  m_SortingOrder: -800
   m_TargetDisplay: 0
 --- !u!224 &208388146
 RectTransform:
@@ -793,7 +793,7 @@ RectTransform:
   m_GameObject: {fileID: 208388142}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 804471497}
@@ -801,9 +801,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 513, y: 241.4}
-  m_SizeDelta: {x: 1026, y: 482.8}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &214818325
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,9 +936,9 @@ GameObject:
   - component: {fileID: 271699766}
   - component: {fileID: 271699768}
   - component: {fileID: 271699767}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (14)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -952,7 +952,7 @@ Transform:
   m_GameObject: {fileID: 271699765}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.144714, y: -7.3982553, z: -0.66260225}
+  m_LocalPosition: {x: 9.144714, y: -7.3200006, z: -0.66260225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1066,9 +1066,9 @@ GameObject:
   - component: {fileID: 352934748}
   - component: {fileID: 352934750}
   - component: {fileID: 352934749}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (18)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1271,9 +1271,9 @@ GameObject:
   - component: {fileID: 466773244}
   - component: {fileID: 466773246}
   - component: {fileID: 466773245}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (9)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1287,7 +1287,7 @@ Transform:
   m_GameObject: {fileID: 466773243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.195274, y: -7.3982553, z: -0.66260225}
+  m_LocalPosition: {x: -33.195274, y: -7.3200006, z: -0.66260225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1401,9 +1401,9 @@ GameObject:
   - component: {fileID: 509502113}
   - component: {fileID: 509502115}
   - component: {fileID: 509502114}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1417,7 +1417,7 @@ Transform:
   m_GameObject: {fileID: 509502112}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.444733, y: -7.3982553, z: -0.66260225}
+  m_LocalPosition: {x: 14.444733, y: -7.3200006, z: -0.66260225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1647,8 +1647,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -512.98047, y: -241.45564}
-  m_SizeDelta: {x: -954.4457, y: -449.0264}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &804471498
 MonoBehaviour:
@@ -1699,9 +1699,9 @@ GameObject:
   - component: {fileID: 811506552}
   - component: {fileID: 811506554}
   - component: {fileID: 811506553}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (8)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1715,7 +1715,7 @@ Transform:
   m_GameObject: {fileID: 811506551}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.04528, y: -7.3982553, z: -0.66260225}
+  m_LocalPosition: {x: -9.04528, y: -7.32, z: -0.66260225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1829,9 +1829,9 @@ GameObject:
   - component: {fileID: 822201196}
   - component: {fileID: 822201198}
   - component: {fileID: 822201197}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (10)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1845,7 +1845,7 @@ Transform:
   m_GameObject: {fileID: 822201195}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.7947164, y: -7.3982553, z: -0.66260225}
+  m_LocalPosition: {x: 2.7947164, y: -7.3200006, z: -0.66260225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2225,9 +2225,9 @@ GameObject:
   - component: {fileID: 1118368830}
   - component: {fileID: 1118368832}
   - component: {fileID: 1118368831}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (11)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2241,7 +2241,7 @@ Transform:
   m_GameObject: {fileID: 1118368829}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.355278, y: -7.3982553, z: -0.66260225}
+  m_LocalPosition: {x: -21.355278, y: -7.3200006, z: -0.66260225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2355,9 +2355,9 @@ GameObject:
   - component: {fileID: 1309414473}
   - component: {fileID: 1309414475}
   - component: {fileID: 1309414474}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2371,7 +2371,7 @@ Transform:
   m_GameObject: {fileID: 1309414472}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.284729, y: -7.3982553, z: -0.66260225}
+  m_LocalPosition: {x: 26.284729, y: -7.3200006, z: -0.66260225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2485,9 +2485,9 @@ GameObject:
   - component: {fileID: 1337820699}
   - component: {fileID: 1337820701}
   - component: {fileID: 1337820700}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2501,7 +2501,7 @@ Transform:
   m_GameObject: {fileID: 1337820698}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.634727, y: -7.3982553, z: -0.66260225}
+  m_LocalPosition: {x: 32.634727, y: -7.3200006, z: -0.66260225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2646,9 +2646,9 @@ GameObject:
   - component: {fileID: 1378603121}
   - component: {fileID: 1378603123}
   - component: {fileID: 1378603122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (13)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2662,7 +2662,7 @@ Transform:
   m_GameObject: {fileID: 1378603120}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.845268, y: -7.3982553, z: -0.66260225}
+  m_LocalPosition: {x: -26.845268, y: -7.3200006, z: -0.66260225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2776,9 +2776,9 @@ GameObject:
   - component: {fileID: 1423154798}
   - component: {fileID: 1423154800}
   - component: {fileID: 1423154799}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (19)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2906,9 +2906,9 @@ GameObject:
   - component: {fileID: 1450579518}
   - component: {fileID: 1450579520}
   - component: {fileID: 1450579519}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (17)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3325,9 +3325,9 @@ GameObject:
   - component: {fileID: 1560199409}
   - component: {fileID: 1560199411}
   - component: {fileID: 1560199410}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (12)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3341,7 +3341,7 @@ Transform:
   m_GameObject: {fileID: 1560199408}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.6952815, y: -7.3982553, z: -0.66260225}
+  m_LocalPosition: {x: -2.6952815, y: -7.3200006, z: -0.66260225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3455,9 +3455,9 @@ GameObject:
   - component: {fileID: 1643406743}
   - component: {fileID: 1643406745}
   - component: {fileID: 1643406744}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (16)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3705,7 +3705,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1706540251}
   - component: {fileID: 1706540250}
-  - component: {fileID: 1706540252}
   m_Layer: 0
   m_Name: SpawnerController
   m_TagString: Untagged
@@ -3731,7 +3730,7 @@ MonoBehaviour:
   rightTopSpawner: {fileID: 2111612007}
   topLeftSpawner: {fileID: 609204331}
   topRightSpawner: {fileID: 1038103275}
-  bulletPrefab: {fileID: 765896612515042819, guid: 9b139cfbcf2394945b7d955645c18b6d, type: 3}
+  bulletPrefab: {fileID: 754233648641630668, guid: 9b139cfbcf2394945b7d955645c18b6d, type: 3}
   spawnInterval: 10
 --- !u!4 &1706540251
 Transform:
@@ -3748,27 +3747,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1706540252
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706540249}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d166e694897877240876112b808e79c1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1757663536
 GameObject:
   m_ObjectHideFlags: 0
@@ -4887,9 +4865,9 @@ GameObject:
   - component: {fileID: 2135950423}
   - component: {fileID: 2135950425}
   - component: {fileID: 2135950424}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boss platform (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4903,7 +4881,7 @@ Transform:
   m_GameObject: {fileID: 2135950422}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.794731, y: -7.3982553, z: -0.66260225}
+  m_LocalPosition: {x: 20.794731, y: -7.3200006, z: -0.66260225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
