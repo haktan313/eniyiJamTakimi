@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -35,6 +36,9 @@ public class KarakterHaraket : MonoBehaviour
     private Elevator currentElevator;
     [SerializeField]
     private GameObject kapi;
+
+    [SerializeField]
+    TextMeshProUGUI memoryText;
 
     int aniCount = 0;
 
@@ -129,31 +133,36 @@ public class KarakterHaraket : MonoBehaviour
         if (other.gameObject.tag == "memory1")
         {
             Debug.Log("Memory1");
-            Destroy(other.gameObject);
+            memoryText.enabled = true;
+            memoryText.text = "Aaaa Evet Kýrmýzý Tuborg Severdi";
             aniCount++;
         }
         if (other.gameObject.tag == "memory2")
         {
             Debug.Log("Memory2");
-            Destroy(other.gameObject);
+            memoryText.enabled = true;
+            memoryText.text = "Saclari sapsariydi";
             aniCount++;
         }
         if (other.gameObject.tag == "memory3")
         {
             Debug.Log("Memory3");
-            Destroy(other.gameObject);
+            memoryText.enabled = true;
+            memoryText.text = "Her zaman o pandora kolyeyi takardý";
             aniCount++;
         }
         if (other.gameObject.tag == "memory4")
         {
             Debug.Log("Memory4");
-            Destroy(other.gameObject);
+            memoryText.enabled = true;
+            memoryText.text = "Arabesk dinlemi cok severdi ozellikle Ferdi Tayfur";
             aniCount++;
         }
         if (other.gameObject.tag == "memory5")
         {
             Debug.Log("Memory5");
-            Destroy(other.gameObject);
+            memoryText.enabled = true;
+            memoryText.text = "Rotweiller bir kopegi vardi 12 yasinda olmustu ona yenisini almistim";
             aniCount++;
         }
         
@@ -169,6 +178,41 @@ public class KarakterHaraket : MonoBehaviour
         {
             isInTrigger = false;
         }
+
+
+        if (other.gameObject.tag == "memory1")
+        {
+            Debug.Log("Memory1");
+            memoryText.enabled = false;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "memory2")
+        {
+            Debug.Log("Memory2");
+            memoryText.enabled = false;
+            Destroy(other.gameObject);
+
+        }
+        if (other.gameObject.tag == "memory3")
+        {
+            Debug.Log("Memory3");
+            memoryText.enabled = false;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "memory4")
+        {
+            Debug.Log("Memory4");
+            memoryText.enabled = false;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "memory5")
+        {
+            Debug.Log("Memory5");
+            memoryText.enabled = false;
+            Destroy(other.gameObject);
+        }
+
+
     }
 
     void OnMove(InputValue playerInputVector)
