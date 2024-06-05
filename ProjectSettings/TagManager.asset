@@ -8,6 +8,13 @@ TagManager:
   - Enemy
   - Boss
   - tutunmaWall
+  - ElevatorButton
+  - memory1
+  - memory2
+  - memory3
+  - memory4
+  - memory5
+  - kapi
   layers:
   - Default
   - TransparentFX

@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class KarakterHaraket : MonoBehaviour
@@ -12,9 +10,7 @@ public class KarakterHaraket : MonoBehaviour
     [SerializeField] float dashCooldown;
     [SerializeField] float dashValue;
     [SerializeField] bool isAttacking = false;
-
     public int gravityWay = 1;
-
     bool isGround = false;
     bool isWalking = false;
     bool isDashing = false;
@@ -34,6 +30,14 @@ public class KarakterHaraket : MonoBehaviour
     [SerializeField]
     private AudioSource walkSound;
 
+    private bool isInTrigger = false;
+    [SerializeField]
+    private Elevator currentElevator;
+    [SerializeField]
+    private GameObject kapi;
+
+    int aniCount = 0;
+
     void Start()
     {
         playerCapsuleCollider = GetComponent<CapsuleCollider2D>();
@@ -52,7 +56,14 @@ public class KarakterHaraket : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
+
+        if (isInTrigger && Input.GetKeyDown(KeyCode.E) && currentElevator != null)
+        {
+            Debug.Log("E tuþuna basýldý ve asansör tetiklendi.");
+            currentElevator.MoveToTarget();
+        }
     }
+
     void FixedUpdate()
     {
         if (!isAttacking)
@@ -83,25 +94,80 @@ public class KarakterHaraket : MonoBehaviour
             isTutunma = false;
         }
         if (other.gameObject.tag == "tutunmaWall")
-        { 
-           playerRB.gravityScale = 0;
-           isTutunma = true;
+        {
+            playerRB.gravityScale = 0;
+            isTutunma = true;
             playerAnimator.SetBool("isJumping", false);
             playerAnimator.SetBool("tutunma", true);
             Debug.Log("tutundu");
         }
-
     }
+
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.tag == "Ground")
         {
             isGround = false;
-        }if (other.gameObject.tag == "tutunmaWall")
+        }
+        if (other.gameObject.tag == "tutunmaWall")
         {
             isTutunma = false;
             playerRB.gravityScale = 8;
             playerAnimator.SetBool("tutunma", false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "ElevatorButton")
+        {
+            Debug.Log("Elevator Button is in trigger");
+            isInTrigger = true;
+        }
+
+
+        if (other.gameObject.tag == "memory1")
+        {
+            Debug.Log("Memory1");
+            Destroy(other.gameObject);
+            aniCount++;
+        }
+        if (other.gameObject.tag == "memory2")
+        {
+            Debug.Log("Memory2");
+            Destroy(other.gameObject);
+            aniCount++;
+        }
+        if (other.gameObject.tag == "memory3")
+        {
+            Debug.Log("Memory3");
+            Destroy(other.gameObject);
+            aniCount++;
+        }
+        if (other.gameObject.tag == "memory4")
+        {
+            Debug.Log("Memory4");
+            Destroy(other.gameObject);
+            aniCount++;
+        }
+        if (other.gameObject.tag == "memory5")
+        {
+            Debug.Log("Memory5");
+            Destroy(other.gameObject);
+            aniCount++;
+        }
+        
+        if (aniCount == 5)
+        {
+            Destroy(kapi);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "ElevatorButton")
+        {
+            isInTrigger = false;
         }
     }
 
@@ -111,6 +177,7 @@ public class KarakterHaraket : MonoBehaviour
         Debug.Log("Moving: " + playerVector);
         walkSound.Play();
     }
+
     void OnJump(InputValue playerInputVector)
     {
         if (playerInputVector.isPressed == true && isGround)
@@ -118,14 +185,15 @@ public class KarakterHaraket : MonoBehaviour
             playerRB.velocity += new Vector2(0, jumpSpeed * gravityWay);
             playerAnimator.SetBool("isJumping", true);
         }
-        if (playerInputVector.isPressed == true && isTutunma) 
-        { 
+        if (playerInputVector.isPressed == true && isTutunma)
+        {
             Debug.Log("JumpingfromWall");
             playerRB.gravityScale = 8;
             playerRB.velocity += new Vector2(0, wallJumpSpeed * gravityWay);
             playerAnimator.SetBool("isJumping", true);
         }
     }
+
     void OnDash(InputValue playerInputVector)
     {
         if (playerInputVector.isPressed == true)
@@ -135,6 +203,7 @@ public class KarakterHaraket : MonoBehaviour
             dashSound.Play();
         }
     }
+
     IEnumerator Dash()
     {
         isDashing = true;
@@ -148,8 +217,8 @@ public class KarakterHaraket : MonoBehaviour
         isDashing = false;
         playerRB.velocity = Vector2.zero;
         playerRB.gravityScale = originalGravityScale;
-
     }
+
     void OnAttack(InputValue playerInputVector)
     {
         if (playerInputVector.isPressed == true && !isAttacking)
@@ -165,7 +234,15 @@ public class KarakterHaraket : MonoBehaviour
                 comboInt = 0;
             }
             punchSound.Play();
-
         }
+    }
+
+    void OnTriggerElevator(InputValue playerInputVector)
+    {
+        if (playerInputVector.isPressed == true && currentElevator != null && isInTrigger)
+        {
+            currentElevator.MoveToTarget();
+        }
+        Debug.Log("Elevator");
     }
 }
