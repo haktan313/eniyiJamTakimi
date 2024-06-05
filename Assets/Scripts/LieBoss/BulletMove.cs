@@ -7,6 +7,8 @@ public class BulletMove : MonoBehaviour
     public float speed = 8f;
     private Vector2 direction;
 
+    [SerializeField] BP_Health playerHealth;
+
     public void SetDirection(Vector2 dir)
     {
         direction = dir.normalized;

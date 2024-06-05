@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LieBossController : MonoBehaviour
@@ -24,11 +25,16 @@ public class LieBossController : MonoBehaviour
 
     public SlowMotionController slowMotionController;
 
-    public GameObject darkenScreenImage; 
+    public GameObject darkenScreenImage;
     public float darkenDuration = 2.0f;
     public Image darkenImageComponent;
     private Color targetColor;
 
+    [SerializeField] BP_Health bossHealth;
+    [SerializeField] BP_Health playerHealth;
+
+    [SerializeField] Animator animator;
+    bool isAttacking = false;
     private void Start()
     {
         darkenScreenImage.SetActive(false);
@@ -37,6 +43,7 @@ public class LieBossController : MonoBehaviour
         wrongButtons[2] = wrongButton3;
 
         cameraShake = GetComponent<CameraShake>();
+
 
         correctButton.onClick.AddListener(CorrectButtonClick);
         wrongButton.onClick.AddListener(WrongButtonClick);
@@ -57,10 +64,13 @@ public class LieBossController : MonoBehaviour
     {
         for (int i = 0; i < attackSentences.Length; i++)
         {
+            isAttacking = true;
+            animator.SetBool("isAttacking", isAttacking);
             isAnswered = false; 
-
             lieBoss.StartSpeech(attackSentences[i]);
             yield return new WaitUntil(() => lieBoss.isArrived);
+            isAttacking = false;
+            animator.SetBool("isAttacking", isAttacking);
             StartTest(i);
             slowMotionController.StartSlowMotion();
             yield return new WaitUntil(() => isAnswered);
@@ -85,57 +95,64 @@ public class LieBossController : MonoBehaviour
         switch (sentenceIndex)
         {
             case 0:
-                correctButton.GetComponentInChildren<TextMeshProUGUI>().text = " 31 ";
-                wrongButton.GetComponentInChildren<TextMeshProUGUI>().text = " ";
-                wrongButton2.GetComponentInChildren<TextMeshProUGUI>().text = " ";
-                wrongButton3.GetComponentInChildren<TextMeshProUGUI>().text = " ";
+                correctButton.GetComponentInChildren<TextMeshProUGUI>().text = "Tuborg Red";
+                wrongButton.GetComponentInChildren<TextMeshProUGUI>().text = "Bomonti";
+                wrongButton2.GetComponentInChildren<TextMeshProUGUI>().text = "Bremen";
+                wrongButton3.GetComponentInChildren<TextMeshProUGUI>().text = "Efes";
                 break;
             case 1:
                 SwapButtons(correctButton, wrongButton);
-                correctButton.GetComponentInChildren<TextMeshProUGUI>().text = " 32 ";
-                wrongButton.GetComponentInChildren<TextMeshProUGUI>().text = " ";
-                wrongButton2.GetComponentInChildren<TextMeshProUGUI>().text = " ";
-                wrongButton3.GetComponentInChildren<TextMeshProUGUI>().text = " ";
+                correctButton.GetComponentInChildren<TextMeshProUGUI>().text = "Pandora";
+                wrongButton.GetComponentInChildren<TextMeshProUGUI>().text = "Gucci";
+                wrongButton2.GetComponentInChildren<TextMeshProUGUI>().text = "Vivien";
+                wrongButton3.GetComponentInChildren<TextMeshProUGUI>().text = "Cikomokoko";
                 break;
             case 2:
                 SwapButtons(correctButton, wrongButton2);
-                correctButton.GetComponentInChildren<TextMeshProUGUI>().text = " 33 ";
-                wrongButton.GetComponentInChildren<TextMeshProUGUI>().text = " ";
-                wrongButton2.GetComponentInChildren<TextMeshProUGUI>().text = " ";
-                wrongButton3.GetComponentInChildren<TextMeshProUGUI>().text = " ";
+                correctButton.GetComponentInChildren<TextMeshProUGUI>().text = "Arabesk";
+                wrongButton.GetComponentInChildren<TextMeshProUGUI>().text = "Rock";
+                wrongButton2.GetComponentInChildren<TextMeshProUGUI>().text = "Rap";
+                wrongButton3.GetComponentInChildren<TextMeshProUGUI>().text = "Jazz";
                 break;
             case 3:
                 SwapButtons(correctButton, wrongButton3);
-                correctButton.GetComponentInChildren<TextMeshProUGUI>().text = " 34 ";
-                wrongButton.GetComponentInChildren<TextMeshProUGUI>().text = " ";
-                wrongButton2.GetComponentInChildren<TextMeshProUGUI>().text = " ";
-                wrongButton3.GetComponentInChildren<TextMeshProUGUI>().text = " ";
+                correctButton.GetComponentInChildren<TextMeshProUGUI>().text = "Rottweiller";
+                wrongButton.GetComponentInChildren<TextMeshProUGUI>().text = "Golden";
+                wrongButton2.GetComponentInChildren<TextMeshProUGUI>().text = "Terrier";
+                wrongButton3.GetComponentInChildren<TextMeshProUGUI>().text = "Kangal";
                 break;
             case 4:
                 SwapButtons(correctButton, wrongButton);
-                correctButton.GetComponentInChildren<TextMeshProUGUI>().text = " 35 ";
-                wrongButton.GetComponentInChildren<TextMeshProUGUI>().text = " ";
-                wrongButton2.GetComponentInChildren<TextMeshProUGUI>().text = " ";
-                wrongButton3.GetComponentInChildren<TextMeshProUGUI>().text = " ";
+                correctButton.GetComponentInChildren<TextMeshProUGUI>().text = "Sari";
+                wrongButton.GetComponentInChildren<TextMeshProUGUI>().text = "Esmer";
+                wrongButton2.GetComponentInChildren<TextMeshProUGUI>().text = "Kahverengi";
+                wrongButton3.GetComponentInChildren<TextMeshProUGUI>().text = "Siyah";
                 break;
         }
     }
 
     public void CorrectButtonClick()
     {
-        bossHp = 100;
-        bossHp -= 20f;
-        Debug.Log("Boss HP : " + bossHp);
+        bossHealth.currentHealth -= 20;
+        Debug.Log("Boss HP : " + bossHealth.currentHealth);
         buttons.SetActive(false);
         isAnswered = true;
+        if(bossHealth.currentHealth <= 0)
+        {
+            SceneManager.LoadScene(8);
+        }
     }
 
     public void WrongButtonClick()
     {
-        playerHp -= 100;
+        playerHealth.currentHealth -= 20;
         Debug.Log("Player Hp : " +  playerHp);
         buttons.SetActive(false);
         isAnswered = true;
+        if(playerHealth.currentHealth <= 0)
+        {
+            SceneManager.LoadScene(7);
+        } 
     }
 
 
