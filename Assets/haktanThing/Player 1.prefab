@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5644190132380753927}
+  - component: {fileID: 1347627748447764903}
   - component: {fileID: 1491600784576667243}
   - component: {fileID: 5787420859008454478}
   - component: {fileID: 4540993174243166518}
@@ -42,6 +43,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1347627748447764903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6589995380649332066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2a5d2158c205c48840611d48581174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 20
+  jumpSpeed: 35
+  wallJumpSpeed: 50
+  dashCooldown: 0.1
+  dashValue: 75
+  isAttacking: 0
+  gravityWay: 1
+  dashSound: {fileID: 6624919300965434701}
+  punchSound: {fileID: 8159456115547319021}
+  walkSound: {fileID: 4618733045327976426}
+  currentElevator: {fileID: 0}
+  kapi: {fileID: 0}
 --- !u!212 &1491600784576667243
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -126,8 +151,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10084534, y: -0.20138311}
-  m_Size: {x: 2.202736, y: 6.1185064}
+  m_Offset: {x: -0.02244997, y: -0.14538622}
+  m_Size: {x: 1.7995577, y: 4.9761686}
   m_Direction: 0
 --- !u!50 &4540993174243166518
 Rigidbody2D:

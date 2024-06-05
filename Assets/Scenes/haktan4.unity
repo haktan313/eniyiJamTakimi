@@ -715,26 +715,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &804109025 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6589995380649332066, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
-  m_PrefabInstance: {fileID: 1185626983}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &804109027 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4618733045327976426, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
-  m_PrefabInstance: {fileID: 1185626983}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &804109028 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8159456115547319021, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
-  m_PrefabInstance: {fileID: 1185626983}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &804109029 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6624919300965434701, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
-  m_PrefabInstance: {fileID: 1185626983}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &804109033 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8159262426508728218, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
@@ -745,29 +725,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5644190132380753927, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
   m_PrefabInstance: {fileID: 1185626983}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &804109039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804109025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2a5d2158c205c48840611d48581174, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 20
-  jumpSpeed: 35
-  wallJumpSpeed: 50
-  dashCooldown: 0.1
-  dashValue: 75
-  isAttacking: 0
-  gravityWay: 1
-  dashSound: {fileID: 804109029}
-  punchSound: {fileID: 804109028}
-  walkSound: {fileID: 804109027}
-  currentElevator: {fileID: 1102893379}
 --- !u!1 &901812008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,10 +1381,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4540993174243166518, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
-      propertyPath: m_GravityScale
-      value: 8
-      objectReference: {fileID: 0}
+    - target: {fileID: 1347627748447764903, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
+      propertyPath: kapi
+      value: 
+      objectReference: {fileID: 1231245953}
+    - target: {fileID: 1347627748447764903, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
+      propertyPath: currentElevator
+      value: 
+      objectReference: {fileID: 1102893379}
     - target: {fileID: 5644190132380753927, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.04
@@ -1468,37 +1429,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5787420859008454478, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
-      propertyPath: m_Size.x
-      value: 1.7995577
-      objectReference: {fileID: 0}
-    - target: {fileID: 5787420859008454478, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
-      propertyPath: m_Size.y
-      value: 4.9761686
-      objectReference: {fileID: 0}
-    - target: {fileID: 5787420859008454478, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.02244997
-      objectReference: {fileID: 0}
-    - target: {fileID: 5787420859008454478, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.14538622
-      objectReference: {fileID: 0}
     - target: {fileID: 6589995380649332066, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8159262426508728218, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6589995380649332066, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 804109039}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
 --- !u!1 &1231245953
 GameObject:

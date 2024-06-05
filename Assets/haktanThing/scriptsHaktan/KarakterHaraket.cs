@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -32,9 +33,11 @@ public class KarakterHaraket : MonoBehaviour
 
     private bool isInTrigger = false;
     [SerializeField]
-    private Elevator currentElevator;
+    private List<Elevator> currentElevators = new List<Elevator>(); // Asansörlerin listesi
     [SerializeField]
-    private GameObject kapi;
+    private GameObject kapi;  
+    [SerializeField]
+    private GameObject kapiDusen;
 
     int aniCount = 0;
 
@@ -57,10 +60,16 @@ public class KarakterHaraket : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        if (isInTrigger && Input.GetKeyDown(KeyCode.E) && currentElevator != null)
+        if (isInTrigger && Input.GetKeyDown(KeyCode.E) && currentElevators.Count > 0)
         {
             Debug.Log("E tuþuna basýldý ve asansör tetiklendi.");
-            currentElevator.MoveToTarget();
+            foreach (var elevator in currentElevators)
+            {
+                if (elevator != null)
+                {
+                    elevator.MoveToTarget();
+                }
+            }
         }
     }
 
@@ -123,8 +132,12 @@ public class KarakterHaraket : MonoBehaviour
         {
             Debug.Log("Elevator Button is in trigger");
             isInTrigger = true;
+            Elevator elevator = other.GetComponentInParent<Elevator>();
+            if (elevator != null && !currentElevators.Contains(elevator))
+            {
+                currentElevators.Add(elevator);
+            }
         }
-
 
         if (other.gameObject.tag == "memory1")
         {
@@ -156,10 +169,11 @@ public class KarakterHaraket : MonoBehaviour
             Destroy(other.gameObject);
             aniCount++;
         }
-        
+
         if (aniCount == 5)
         {
             Destroy(kapi);
+            kapiDusen.SetActive(true);
         }
     }
 
@@ -168,6 +182,11 @@ public class KarakterHaraket : MonoBehaviour
         if (other.gameObject.tag == "ElevatorButton")
         {
             isInTrigger = false;
+            Elevator elevator = other.GetComponentInParent<Elevator>();
+            if (elevator != null && currentElevators.Contains(elevator))
+            {
+                currentElevators.Remove(elevator);
+            }
         }
     }
 
@@ -239,9 +258,16 @@ public class KarakterHaraket : MonoBehaviour
 
     void OnTriggerElevator(InputValue playerInputVector)
     {
-        if (playerInputVector.isPressed == true && currentElevator != null && isInTrigger)
+        if (playerInputVector.isPressed == true && currentElevators.Count > 0 && isInTrigger)
         {
-            currentElevator.MoveToTarget();
+            Debug.Log("E tuþuna basýldý ve asansör tetiklendi.");
+            foreach (var elevator in currentElevators)
+            {
+                if (elevator != null)
+                {
+                    elevator.MoveToTarget();
+                }
+            }
         }
         Debug.Log("Elevator");
     }
