@@ -23,5 +23,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LazyLevenEndConversation.unity
     guid: 88c311d745d2cc347b901813b83e75bb
+  - enabled: 1
+    path: Assets/Scenes/LieBossCutscene.unity
+    guid: 1c1c3d42de72c234f88818d7780bdd51
+  - enabled: 1
+    path: Assets/Scenes/LieBossScene.unity
+    guid: 14eed80a7f9f6884ea7370a8fb740428
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b140b4ef84b93ef43b1830754e835b39, type: 2}

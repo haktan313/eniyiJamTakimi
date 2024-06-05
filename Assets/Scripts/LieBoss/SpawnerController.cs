@@ -8,6 +8,8 @@ public class SpawnerController : MonoBehaviour
     public Transform leftTopSpawner;
     public Transform rightBottomSpawner;
     public Transform rightTopSpawner;
+    public Transform topLeftSpawner;
+    public Transform topRightSpawner;
 
     public GameObject bulletPrefab;
     public float spawnInterval = 1f;
@@ -23,11 +25,13 @@ public class SpawnerController : MonoBehaviour
         {
             SpawnBullet(leftBottomSpawner, Vector2.right);
             SpawnBullet(rightTopSpawner, Vector2.left);
+            SpawnBullet(topRightSpawner, Vector2.down);
 
             yield return new WaitForSeconds(spawnInterval);
 
             SpawnBullet(rightBottomSpawner, Vector2.left);
             SpawnBullet(leftTopSpawner, Vector2.right);
+            SpawnBullet(topLeftSpawner, Vector2.down);
 
             yield return new WaitForSeconds(spawnInterval);
         }

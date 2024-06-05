@@ -39,11 +39,9 @@ public class LieBossController : MonoBehaviour
         cameraShake = GetComponent<CameraShake>();
 
         correctButton.onClick.AddListener(CorrectButtonClick);
-        for (int i = 0; i < wrongButtons.Length; i++)
-        {
-            wrongButtons[i].onClick.AddListener(WrongButtonClick);
-        }
-
+        wrongButton.onClick.AddListener(WrongButtonClick);
+        wrongButton2.onClick.AddListener(WrongButtonClick);
+        wrongButton3.onClick.AddListener(WrongButtonClick);
     }
 
     void Update()
@@ -76,7 +74,7 @@ public class LieBossController : MonoBehaviour
             yield return StartCoroutine(FadeImage(false, darkenDuration));
             darkenScreenImage.SetActive(false);
 
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(4f);
         }
     }
 
