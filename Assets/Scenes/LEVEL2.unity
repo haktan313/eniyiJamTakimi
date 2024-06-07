@@ -1932,6 +1932,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6624919300965434701, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a50619b7633d1c446bcf3539cfee8fdd, type: 3}
+    - target: {fileID: 8159456115547319021, guid: 2edfa0410092f174db86602ea67008b4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 709fefaa893d9a841a8daa75d59b4cf2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2626,7 +2634,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 613e50d005f152c4d930c867824ec48d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4077,7 +4085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2246003784126812326, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -92.06558
+      value: -92.16278
       objectReference: {fileID: 0}
     - target: {fileID: 2246003784126812326, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: m_LocalPosition.y

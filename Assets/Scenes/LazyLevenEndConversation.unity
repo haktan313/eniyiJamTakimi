@@ -158,7 +158,9 @@ MonoBehaviour:
     sentences:
     - "Afferin ilk hatanla y\xFCzle\u015Ftin"
     - "Ne zamana biter ya bu i\u015Fer"
-    - Hazirana kadar hallolur
+    - Daha var simdi kalbini kirdigin eski sevgilinle yuzlesme vaktin bakalim onu
+      ne kadar iyi hatirliyorsun gorecegiz
+    - Lanet olsun neyse yapicak bir sey yok
 --- !u!4 &27146838
 Transform:
   m_ObjectHideFlags: 0
