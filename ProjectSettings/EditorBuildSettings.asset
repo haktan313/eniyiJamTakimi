@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LazyLevenEndConversation.unity
     guid: 88c311d745d2cc347b901813b83e75bb
   - enabled: 1
+    path: Assets/Scenes/LEVEL2.unity
+    guid: 561677c5cd2aaf64094a5b4e896f4448
+  - enabled: 1
     path: Assets/Scenes/LieBossCutscene.unity
     guid: 1c1c3d42de72c234f88818d7780bdd51
   - enabled: 1

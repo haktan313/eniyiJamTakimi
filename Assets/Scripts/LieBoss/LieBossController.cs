@@ -1,14 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LieBossController : MonoBehaviour
 {
+
+
+
+    /* 
+        START FONKSÝYONUNDA OLUÞAN BÝR HATA NEDENÝYLE HER ÞEYÝ SERÝAZLEFÝELD ÝLE UI DAN EKLEMEK ZORUNDA KALDIM. ÇÜNKÜ GETCOMPENET KULLANDIÐIM ZAMAN
+        NEDENSE ÇALIÞMIYORDU BEN DE ÇÖZÜMÜ UYGUN OLMASADA BU YÖNDE YAPTIM.
+     
+     */
+
+
     public LieBoss lieBoss;
-    CameraShake cameraShake;
 
     public float bossHp = 100;
     public float playerHp = 100;
@@ -35,15 +45,14 @@ public class LieBossController : MonoBehaviour
 
     [SerializeField] Animator animator;
     bool isAttacking = false;
+    bool isStarted = false;
+
     private void Start()
     {
         darkenScreenImage.SetActive(false);
         wrongButtons[0] = wrongButton;
         wrongButtons[1] = wrongButton2;
         wrongButtons[2] = wrongButton3;
-
-        cameraShake = GetComponent<CameraShake>();
-
 
         correctButton.onClick.AddListener(CorrectButtonClick);
         wrongButton.onClick.AddListener(WrongButtonClick);
@@ -53,9 +62,9 @@ public class LieBossController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K)) 
+        if(!isStarted)
         {
-            //cameraShake.Shake();
+            isStarted = true;
             StartCoroutine(Attack());
         }
     }
@@ -139,7 +148,7 @@ public class LieBossController : MonoBehaviour
         isAnswered = true;
         if(bossHealth.currentHealth <= 0)
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(9);
         }
     }
 
@@ -151,7 +160,7 @@ public class LieBossController : MonoBehaviour
         isAnswered = true;
         if(playerHealth.currentHealth <= 0)
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(8);
         } 
     }
 

@@ -67,6 +67,9 @@ public class DialogueManager : MonoBehaviour
             case 3:
                 SceneManager.LoadScene(4);
                 break;
+            case 5:
+                SceneManager.LoadScene(6);
+                break;
         }
     }
 
