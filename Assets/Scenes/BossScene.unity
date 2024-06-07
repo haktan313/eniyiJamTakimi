@@ -143,15 +143,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1284177943289503713, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: orthographic size
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2246003784126812326, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.338726
+      value: -12.278888
       objectReference: {fileID: 0}
     - target: {fileID: 2246003784126812326, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.7269597
+      value: 4.77115
       objectReference: {fileID: 0}
     - target: {fileID: 2246003784126812326, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -360,7 +360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 918883277453856316, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1487450205763861139, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_Name
@@ -372,7 +372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2234424103923537115, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_MaxWindowSize
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2234424103923537115, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_BoundingShape2D
@@ -380,23 +380,23 @@ PrefabInstance:
       objectReference: {fileID: 389034928}
     - target: {fileID: 2599661643554968153, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5981739153264038880, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.978638
+      value: -27.428638
       objectReference: {fileID: 0}
     - target: {fileID: 5981739153264038880, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8510163
+      value: 1.408984
       objectReference: {fileID: 0}
     - target: {fileID: 7189516699135502724, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.978638
+      value: -27.428638
       objectReference: {fileID: 0}
     - target: {fileID: 7189516699135502724, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8510163
+      value: 1.408984
       objectReference: {fileID: 0}
     - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_Follow
@@ -412,7 +412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_ChildCameras.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -477,7 +477,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.0674, y: -14.52, z: 0}
-  m_LocalScale: {x: 107.37533, y: 2.7625, z: 1}
+  m_LocalScale: {x: 107.37533, y: 3.48075, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1017333975}
@@ -537,11 +537,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5644190132380753927, guid: bed9a2f92b04a89489c641d9314396f3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.26
+      value: -27.71
       objectReference: {fileID: 0}
     - target: {fileID: 5644190132380753927, guid: bed9a2f92b04a89489c641d9314396f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.75
+      value: 4.01
       objectReference: {fileID: 0}
     - target: {fileID: 5644190132380753927, guid: bed9a2f92b04a89489c641d9314396f3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -928,7 +928,7 @@ GameObject:
   - component: {fileID: 1609152075}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Boss
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1115,8 +1115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1cc6bcbd091b884299583d4c5f2d927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 1000
-  maxHealth: 1000
+  currentHealth: 400
+  maxHealth: 400
   turnSpeed: 180
   fallSpeed: 1
 --- !u!82 &1609152075

@@ -318,6 +318,10 @@ MonoBehaviour:
   jumpSpeed: 5
   dashCooldown: 0.1
   dashValue: 50
+  isAttacking: 0
+  dashSound: {fileID: 0}
+  punchSound: {fileID: 0}
+  walkSound: {fileID: 0}
 --- !u!50 &1359491515
 Rigidbody2D:
   serializedVersion: 4

@@ -885,6 +885,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 100
   maxHealth: 100
+  turnSpeed: 180
+  fallSpeed: 1
 --- !u!70 &1321398573
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1609,11 +1611,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2246003784126812326, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50.90706
+      value: -47.54519
       objectReference: {fileID: 0}
     - target: {fileID: 2246003784126812326, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2744201
+      value: 1.2794701
       objectReference: {fileID: 0}
     - target: {fileID: 2246003784126812326, guid: 5165c3da61372ed4ea83243cece4bbad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1712,6 +1714,22 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1422493649}
+    - target: {fileID: 5981739153264038880, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -65.59863
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981739153264038880, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.44898367
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189516699135502724, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -65.59863
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189516699135502724, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.44898367
+      objectReference: {fileID: 0}
     - target: {fileID: 8545187918383714560, guid: 2bf1108aaf7314d488fe7d6076f2a526, type: 3}
       propertyPath: m_Follow
       value: 
