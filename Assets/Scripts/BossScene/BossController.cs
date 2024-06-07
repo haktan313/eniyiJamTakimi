@@ -42,7 +42,7 @@ public class BossController : MonoBehaviour
 
         if(health.currentHealth <= 0)
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
         }
     }
 

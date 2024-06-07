@@ -19,7 +19,7 @@ public class LevelSkipper : MonoBehaviour
 
     void SceneChange(VideoPlayer vp)
     {
-      SceneManager.LoadScene(1);
+      SceneManager.LoadScene(2);
     }
 }
     

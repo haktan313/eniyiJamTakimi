@@ -148,7 +148,7 @@ public class LieBossController : MonoBehaviour
         isAnswered = true;
         if(bossHealth.currentHealth <= 0)
         {
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene(10);
         }
     }
 
@@ -160,7 +160,7 @@ public class LieBossController : MonoBehaviour
         isAnswered = true;
         if(playerHealth.currentHealth <= 0)
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(9);
         } 
     }
 
